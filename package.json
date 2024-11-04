@@ -10,6 +10,8 @@
 	},
 	"dependencies": {
 		"@floating-ui/react-dom": "^2.1.1",
+		"@liveblocks/client": "^2.10.2",
+		"@liveblocks/react": "^2.10.2",
 		"classnames": "^2.5.1",
 		"next": "^14.2.4",
 		"postcss": "^8.4.39",

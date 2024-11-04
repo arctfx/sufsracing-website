@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Text, Flex, Button, Grid, Icon, InlineCode, Logo, Background, RevealFx, SparkleFx } from '@/once-ui/components';
+import { Heading, Text, Flex, Button, Badge, Grid, Icon, InlineCode, Logo, SmartImage, SmartLink, Background, RevealFx, SparkleFx } from '@/once-ui/components';
 import Link from 'next/link';
 
 export default function Home() {
@@ -17,7 +17,18 @@ export default function Home() {
 			fillWidth paddingTop="l" paddingX="l"
 			direction="column" alignItems="center" flex={1}>
 			<Background
-				dots={false}/>
+			    position="absolute"
+			    mask="cursor"
+			    gradient={{
+			      display: false
+			    }}
+			    dots={{
+			      display: true
+			    }}
+			    lines={{
+			      display: true
+			    }}
+			  />
 			<Flex
 				position="relative"
 				as="section" overflow="hidden"
@@ -74,24 +85,46 @@ export default function Home() {
 								SU FS Racing е първият отбор на Софийски Университет "Св. Климент Охридски"
 								към международното съзтезание по инженерен дизайн Formula Student.
 							</Text>
+							<br/><br/>
+							<Text
+								wrap="balance"
+								onBackground="neutral-weak"
+								variant="body-default-l">
+								Ако си студент в Софийски Университет, бакалавър, магистър или докторант
+								и те влече мотоспорта, не пропускай да се включиш в нашия отбор.
+								За повече информация и изявяване на интерес можете да попълните следната
+								<SmartLink
+								  href="https://docs.google.com/forms/d/e/1FAIpQLSfejAkAj2_oeVM_-nGIfhDoEDq-TwG5UrHKyHW9SYyotc5sTA/viewform"
+								  iconSize="xs">
+								  анкета.
+								</SmartLink>
+							</Text>
 							</RevealFx>
-							<Button
-								href="https://www.imeche.org/events/formula-student"
-								suffixIcon="chevronRight"
-								variant="secondary">
-								Formula Student
-							</Button>
-						</Flex>
-					</Flex>
-					{/* <Grid
-						radius="l"
-						border="neutral-medium"
-						borderStyle="solid-1"
-						columns="repeat(3, 1fr)"
-						tabletColumns="1col"
-						mobileColumns="1col"
-						fillWidth>
-						{links.map((link) => (
+							<Badge
+							  icon="openLink"
+							  arrow
+							  effect
+							  href="https://www.imeche.org/events/formula-student"
+							>
+							  Formula Student
+							</Badge>
+
+							<Grid
+								radius="l"
+								border="neutral-medium"
+								borderStyle="solid-1"
+								columns="repeat(2, 1fr)"
+								tabletColumns="1col"
+								mobileColumns="1col"
+								fillWidth>
+								<SmartImage
+								  src="/images/project-card-bg-1.png"
+								  alt="Image description"
+								  aspectRatio="16/10"
+								  radius="l"
+								  objectFit="cover"
+								/>
+						{/* {links.map((link) => (
 							<Link
 								target="_blank"
 								style={{ padding: 'var(--responsive-space-l)' }}
@@ -115,8 +148,10 @@ export default function Home() {
 									</Text>
 								</Flex>
 							</Link>
-						))}
-					</Grid> */}
+						))} */}
+					</Grid>
+						</Flex>
+					</Flex>
 				</Flex>
 			</Flex>
 			<Flex

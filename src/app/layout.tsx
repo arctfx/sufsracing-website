@@ -12,6 +12,12 @@ const primary = Inter({
     display: 'swap'
 });
 
+const tertiary = Space_Grotesk({
+    variable: '--font-tertiary',
+    subsets: ['latin'],
+    display: 'swap'
+});
+
 
 type FontConfig = {
     variable: string;
@@ -22,7 +28,7 @@ type FontConfig = {
 	from https://once-ui.com/customize
 */
 const secondary: FontConfig | undefined = undefined;
-const tertiary: FontConfig | undefined = undefined;
+// const tertiary: FontConfig | undefined = undefined;
 /*
 */
 
@@ -43,12 +49,12 @@ export default function RootLayout({
 			fillHeight background="page"
 			data-theme="dark"
 			data-brand="red"
-			data-accent="aqua"
+			data-accent="yellow"
 			data-neutral="gray"
 			data-border="rounded"
-			data-solid="color"
+			data-solid="contrast"
 			data-solid-style="flat"
-			data-surface="filled"
+			data-surface="translucent"
 			data-transition="all"
 			
 			className={classNames(
