@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import { Heading, Text, Flex, Button, Badge, Grid, Icon, InlineCode, Logo, SmartImage, SmartLink, Background, RevealFx, SparkleFx } from '@/once-ui/components';
 import Link from 'next/link';
@@ -13,6 +14,7 @@ export default function Home() {
 	// ];
 
 	return (
+			
 		<Flex
 			fillWidth paddingTop="l" paddingX="l"
 			direction="column" alignItems="center" flex={1}>
@@ -30,6 +32,57 @@ export default function Home() {
 			    }}
 			  />
 			<Flex
+                fillWidth
+                alignItems="center" justifyContent="flex-end">
+					<Image
+      				  src="/images/sufs.png"
+      				  alt="SUFS Racing logo"
+      				  width={729/8} // Specify width
+      				  height={159/8} // Specify height
+      				/>
+			{/* <Heading
+								wrap="balance"
+								variant="display-strong-l"> */}
+                <Flex
+                    hide="s"
+                    textVariant="label-default-s"
+                    fillWidth gap="4" paddingX="l"
+                    alignItems="center">
+                    <SmartLink
+                        href="">
+                        Home
+                    </SmartLink>
+                    <SmartLink
+                        href="">
+                        About us 
+                    </SmartLink>
+                    <SmartLink
+                        href="">
+                        Formula Student
+                    </SmartLink>
+                    <SmartLink
+                        href="">
+                        Join us
+                    </SmartLink>
+                </Flex>
+                {/* <Flex
+                    alignItems="center"
+                    gap="8">
+                    <Button
+                        size="s"
+                        variant="secondary"
+                        label="Login"
+                        href=""/>
+                    <Button
+                        size="s"
+                        variant="primary"
+                        label="Sign up"
+                        href=""/>
+                </Flex> */}
+            {/* </Heading> */}
+			</Flex>
+
+			<Flex
 				position="relative"
 				as="section" overflow="hidden"
 				fillWidth minHeight="0" maxWidth={68}
@@ -37,19 +90,20 @@ export default function Home() {
 					<Heading
 								wrap="balance"
 								variant="display-strong-l">
-								<Flex
+								{/* <Flex
 									position="relative">
-										{/* <Button
+										<Button
 											data-border="rounded"
 											href={`/about`}
 											variant="tertiary"
 											suffixIcon="chevronRight"
 											size="m">
 										About			
-										</Button> */}
+										</Button>
 										SUFS Racing
-								</Flex>
+								</Flex> */}
 							</Heading>
+							
 				<Flex
 					as="main"
 					direction="column" justifyContent="center"
@@ -84,20 +138,19 @@ export default function Home() {
 								variant="body-default-l">
 								SU FS Racing е първият отбор на Софийски Университет "Св. Климент Охридски"
 								към международното съзтезание по инженерен дизайн Formula Student.
-							</Text>
-							<br/><br/>
-							<Text
-								wrap="balance"
-								onBackground="neutral-weak"
-								variant="body-default-l">
+								<br/><br/>
 								Ако си студент в Софийски Университет, бакалавър, магистър или докторант
-								и те влече мотоспорта, не пропускай да се включиш в нашия отбор.
+								и те влече мотоспорта, не пропускай да се включиш в нашия отбор!
 								За повече информация и изявяване на интерес можете да попълните следната
 								<SmartLink
 								  href="https://docs.google.com/forms/d/e/1FAIpQLSfejAkAj2_oeVM_-nGIfhDoEDq-TwG5UrHKyHW9SYyotc5sTA/viewform"
 								  iconSize="xs">
-								  анкета.
+								  анкета. 
 								</SmartLink>
+								Всеки попълнил анкетата ще получи обратна връзка. 
+								Нашият екип ще разгледа регистрацията внимателно и ще върне отговор колкото е възможно най-скоро.
+								<br/><br/>
+								Все още се колебаеш дали да участваш или имаш още въпроси - влез в дискорд сървъра и попитай някой от модераторите ни.
 							</Text>
 							</RevealFx>
 							<Badge
@@ -108,12 +161,12 @@ export default function Home() {
 							>
 							  Formula Student
 							</Badge>
-
+							
 							<Grid
 								radius="l"
 								border="neutral-medium"
 								borderStyle="solid-1"
-								columns="repeat(2, 1fr)"
+								columns="repeat(1, 1fr)"
 								tabletColumns="1col"
 								mobileColumns="1col"
 								fillWidth>
@@ -149,7 +202,7 @@ export default function Home() {
 								</Flex>
 							</Link>
 						))} */}
-					</Grid>
+							</Grid>
 						</Flex>
 					</Flex>
 				</Flex>
