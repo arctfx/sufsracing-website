@@ -5,6 +5,7 @@ import { Flex } from '@/once-ui/components'
 import classNames from 'classnames';
 import { Inter } from 'next/font/google';
 import { Space_Grotesk } from 'next/font/google';
+import { Analytics } from "@vercel/analytics/react"
 
 const primary = Inter({
     variable: '--font-primary',
@@ -70,6 +71,7 @@ export default function RootLayout({
 					flex={1} direction="column">
 					{children}
 				</Flex>
+				<Analytics />
 			</Flex>
 		</Flex>
 	);
